@@ -32,7 +32,7 @@ int main()
             chucNang4();
             break;
         case 5:
-            printf("Thoat chuong trinh.\n");
+            printf("Thoat chuong trinh.\n");    
             break;
         default:
             printf("Lua chon khong hop le. Vui long chon lai.\n");
