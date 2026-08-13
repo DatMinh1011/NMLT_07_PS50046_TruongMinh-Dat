@@ -46,7 +46,7 @@ int main()
         }
         case 4:
         {
-            printf("Ban da chon 4. Nhap so tien dien \n");
+            printf("Ban da chon 4. Nhap so tien dien \n"); 
             break;
         }
         case 5:
