@@ -65,7 +65,6 @@ int main()
 }
 
 void nhapXuatSinhVien(struct SinhVien mangSV[], int *n)
-// int *n con trỏ tới số lượng sinh viên (dùng để lưu số lượng nhập vào).
 {
     printf("Nhap so luong sinh vien: ");
     scanf("%d", n);
@@ -77,10 +76,8 @@ void nhapXuatSinhVien(struct SinhVien mangSV[], int *n)
 
         printf("Nhap Ho ten: ");
         getchar();
-        // getchar loại bỏ ký tự xuống dòng còn sót lại từ lần nhập trước.
         fgets(mangSV[i].hoTen, sizeof(mangSV[i].hoTen), stdin);
         mangSV[i].hoTen[strcspn(mangSV[i].hoTen, "\n")] = '\0';
-        // strcspn để xóa ký tự \n ở cuối chuỗi.
 
         printf("Nhap diem TB: ");
         scanf("%f", &mangSV[i].diemTB);
@@ -88,7 +85,6 @@ void nhapXuatSinhVien(struct SinhVien mangSV[], int *n)
     }
     printf(" >> Danh sach sinh vien vua nhap <<\n");
     printf("%-5s %-20s %-12s %-6s\n", "STT", "Ho va Ten", "MSSV", "DiemTB");
-    // %-5d %-20s %-12s %-6.2f dùng để chỉnh ngay ngắn theo số lượng kí tự đã quy định, căn trái
     for (int i = 0; i < *n; i++)
     {
         printf("%-5d %-20s %-12s %-6.2f\n", i + 1, mangSV[i].hoTen, mangSV[i].MSSV, mangSV[i].diemTB);
@@ -116,7 +112,6 @@ void sapXepSinhVien(struct SinhVien mangSV[], int n)
         printf("%-5d %-20s %-12s %-6.2f\n", i + 1, mangSV[i].hoTen, mangSV[i].MSSV, mangSV[i].diemTB);
     }
 }
-//=============================================================================================================
 void timKiemSinhVien(struct SinhVien mangSV[], int n)
 {
     char mssvTim[50];
